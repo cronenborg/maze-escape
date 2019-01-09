@@ -51,21 +51,21 @@ Or
 
 If you want to quick test it on your terminal using cUrl, just run the following command:
 
-curl --request GET \
---url 'http://localhost:3000/?startingpoint=%5B0%2C4%5D&matrix=%5B%5B%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22O%22%2C%22X%22%2C%22X%22%5D%2C%5B%22X%22%2C%22O%22%2C%22O%22%2C%22O%22%2C%22O%22%2C%22X%22%2C%22X%22%5D%2C%5B%22X%22%2C%22O%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%5D%2C%5B%22X%22%2C%22O%22%2C%22O%22%2C%22O%22%2C%22O%22%2C%22O%22%2C%22O%22%5D%2C%5B%22X%22%2C%22O%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%5D%5D'
+>curl --request GET \
+>  --url 'http://localhost:3000/?startingpoint=%5B0%2C4%5D&>matrix=%5B%5B%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22O%22%2C%22X%22%2C%22X%22%5D%2C%5B%22X%22%2C%22O%22%2C%22O%22%2C%22O%22%2C%22O%22%2>C%22X%22%2C%22X%22%5D%2C%5B%22X%22%2C%22O%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%5D%2C%5B%22X%22%2C%22O%22%2C%22O%22%2C%22O%>22%2C%22O%22%2C%22O%22%2C%22O%22%5D%2C%5B%22X%22%2C%22O%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%2C%22X%22%5D%5D'
 
 
 If you want to test it with large arrays, please use POST on your REST API Test Client (such as Insomnia or Postman)
 Or on your terminal, using cUrl:
 
 
-curl --request POST \
-  --url http://localhost:3000/ \
-  --header 'content-type: application/json' \
-  --data '{
-	"matrix": [["X","X","X","X","O","X","X"],["X","O","O","O","O","X","X"],["X","O","X","X","X","X","X"],["X","O","O","O","O","O","O"],["X","O","X","X","X","X","X"],["X","O","O","O","O","X","X"],["X","X","X","X","O","X","X"],["X","X","X","X","O","X","X"],["X","O","O","O","O","X","X"],["X","O","X","X","O","X","X"],["X","O","O","O","O","X","X"],["X","O","X","X","X","X","X"],["X","X","X","X","X","X","X"]],
-	"startingpoint": [0,4]
-}'
+>curl --request POST \
+>  --url http://localhost:3000/ \
+>  --header 'content-type: application/json' \
+>  --data '{
+>	"matrix": [["X","X","X","X","O","X","X"],["X","O","O","O","O","X","X"],["X","O","X","X","X","X","X"],["X","O","O","O","O","O","O"],>["X","O","X","X","X","X","X"],["X","O","O","O","O","X","X"],["X","X","X","X","O","X","X"],["X","X","X","X","O","X","X"],["X","O","O",>"O","O","X","X"],["X","O","X","X","O","X","X"],["X","O","O","O","O","X","X"],["X","O","X","X","X","X","X"],["X","X","X","X","X","X",>"X"]],
+>	"startingpoint": [0,4]
+>}'
 
 
 ## Notes
