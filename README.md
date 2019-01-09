@@ -1,12 +1,12 @@
 # Maze Escape
 
-### A NodeJS implementation of Tremaux' Algorithm
+## A NodeJS implementation of Tremaux' Algorithm
 
-#### Description
+### Description
 
 This is a NodeJS/Express web application that accepts a bidimensional matrix representing a maze and a starting point as coordinates.
 
-##### Input
+#### Input
 
 METHOD: HTTP GET/POST
 PARAMS (get or post): 
@@ -17,7 +17,7 @@ The "matrix" represents the maze:
 X: wall
 O: open cell
 
-##### Output
+#### Output
 
 - result (int)
 - message (string)
@@ -28,13 +28,21 @@ In particular "path" object is the array of coordinates to get the solution
 
 
 
-#### Quick Start
+### Quick Start
 
 Clone or download the repository
+
 open terminal
+
 > cd [the repository folder]
+
+
 > npm install
+
+
 > node index.js
+
+
 
 Then open your browser and point to:
 http://localhost:3000/?startingpoint=[0,4]&matrix=[%20[%22X%22,%22X%22,%22X%22,%22X%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22O%22,%22O%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22X%22,%22X%22,%22X%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22O%22,%22O%22,%22O%22,%22O%22,%22O%22],%20[%22X%22,%22O%22,%22X%22,%22X%22,%22X%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22O%22,%22O%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22X%22,%22X%22,%22X%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22X%22,%22X%22,%22X%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22O%22,%22O%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22X%22,%22X%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22O%22,%22O%22,%22O%22,%22X%22,%22X%22],%20[%22X%22,%22O%22,%22X%22,%22X%22,%22X%22,%22X%22,%22X%22],%20[%22X%22,%22X%22,%22X%22,%22X%22,%22X%22,%22X%22,%22X%22]%20]
@@ -60,7 +68,7 @@ curl --request POST \
 }'
 
 
-### Notes
+## Notes
 
 The algorithm will be truncated after 10000 iterations to prevent ram overflows.
 If needed this param can be changed on index.js at line 96
