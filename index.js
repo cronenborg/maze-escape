@@ -1,12 +1,26 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+
 var app = express();
+app.use( bodyParser.json() );
 
 class MazeEscape {
     constructor(req) {
         this.req = req;
-        this.matrixx                        = JSON.parse(req.query.matrix);
+
+        if (typeof(req.query.matrix)!="undefined") {
+            this.matrixx                        = JSON.parse(req.query.matrix);
+        } else {
+            this.matrixx                        = req.body.matrix;
+        }
+
+        if (typeof(req.query.startingpoint)!="undefined") {
+            this.startingpoint                        = JSON.parse(req.query.startingpoint);
+        } else {
+            this.startingpoint                        = req.body.startingpoint;
+        }
+        
         this.matrixsolved                   = this.matrixx;
-        this.startingpoint                  = JSON.parse(req.query.startingpoint);
         this.position                       = this.startingpoint;
         this.m_width                        = this.matrixx[0].length;
         this.m_height                       = this.matrixx.length;
@@ -79,7 +93,7 @@ class MazeEscape {
                     }
                 }
                 ///// breaking too long processes or infinite loops
-                if  (i>45) {
+                if  (i>10000) {
                     break;
                 }
                 i++;
@@ -438,13 +452,38 @@ class MazeEscape {
 
 }
 
-app.get('/mazeescape', function (req, res, next) {
-    // var matrix                  = JSON.parse(req.query.matrix);
-    // var startingpoint           = JSON.parse(req.query.startingpoint);
-    var mazeEscape              = new MazeEscape(req);
-    res.json(
-        mazeEscape.mainfunction()
-    );
+app.get('/', function (req, res, next) {
+    if (typeof(req.query.matrix)=="undefined") {
+        res.json(
+            {result: -1, message: "Error: missing required param matrix"}
+        );
+    } else if (typeof(req.query.startingpoint)=="undefined") {
+        res.json(
+            {result: -1, message: "Error: missing required param startingpoint"}
+        );
+    } else {
+        var mazeEscape              = new MazeEscape(req);
+        res.json(
+            mazeEscape.mainfunction()
+        );
+    }
+});
+
+app.post('/', function (req, res, next) {
+    if (typeof(req.body.matrix)=="undefined") {
+        res.json(
+            {result: -1, message: "Error: missing required param matrix"}
+        );
+    } else if (typeof(req.body.startingpoint)=="undefined") {
+        res.json(
+            {result: -1, message: "Error: missing required param startingpoint"}
+        );
+    } else {
+        var mazeEscape              = new MazeEscape(req);
+        res.json(
+            mazeEscape.mainfunction()
+        );
+    }
 });
 
 
