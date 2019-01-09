@@ -76,4 +76,4 @@ Or on your terminal, using cUrl:
 
 The algorithm will be truncated after 10000 iterations to prevent ram overflows.
 If needed this param can be changed on index.js at line 96
-
+To test the API with INSOMNIA or POSTMAN, please import the included json/har files

@@ -1,0 +1,104 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-01-09T18:48:17.398Z",
+	"__export_source": "insomnia.desktop.app:v6.0.2",
+	"resources": [
+		{
+			"_id": "wrk_c6b88e9e5e1a490b9011758b2e15c342",
+			"created": 1547057309017,
+			"description": "",
+			"modified": 1547057309017,
+			"name": "localhost",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_f4d25a4b4156431ebf2e2ecf84782380",
+			"color": null,
+			"created": 1547057309038,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1547057309038,
+			"modified": 1547057309038,
+			"name": "New Environment",
+			"parentId": "wrk_c6b88e9e5e1a490b9011758b2e15c342",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_6ca7325a0af6444a87f980ec4a62d981",
+			"cookies": [],
+			"created": 1547057309041,
+			"modified": 1547057309041,
+			"name": "Default Jar",
+			"parentId": "wrk_c6b88e9e5e1a490b9011758b2e15c342",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_0e49cc543f5e4064a7d5fac88309f601",
+			"authentication": {},
+			"body": {},
+			"created": 1547057330912,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1547057330912,
+			"method": "GET",
+			"modified": 1547057386617,
+			"name": "Maze Escape GET",
+			"parameters": [
+				{
+					"id": "pair_6baf27f5d72c404caa910670291f0a67",
+					"name": "startingpoint",
+					"value": "[0,4]"
+				},
+				{
+					"id": "pair_514b214e35ea4570861e6f9f13f10f52",
+					"name": "matrix",
+					"value": "[[\"X\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\"]]"
+				}
+			],
+			"parentId": "wrk_c6b88e9e5e1a490b9011758b2e15c342",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6a3751495b684bdbb8aa12a1f835319b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"matrix\": [[\"X\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"O\",\"O\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"O\",\"O\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\",\"X\",\"X\",\"X\"]],\n\t\"startingpoint\": [0,4]\n}"
+			},
+			"created": 1547057607276,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_ac0c74e7210d465e8fb7909de13420dd",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1547057330862,
+			"method": "POST",
+			"modified": 1547058198336,
+			"name": "Maze Escape POST",
+			"parameters": [],
+			"parentId": "wrk_c6b88e9e5e1a490b9011758b2e15c342",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000",
+			"_type": "request"
+		}
+	]
+}
